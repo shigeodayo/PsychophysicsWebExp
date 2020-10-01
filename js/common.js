@@ -1,8 +1,8 @@
 function recordAnswer(answer) {
     var trialCount = $.cookie("trial_count");
     $.cookie("ans-" + String(trialCount), answer);
-    alert("ans-" + String(trialCount));
-    alert(answer);
+    // alert("ans-" + String(trialCount));
+    // alert(answer);
 }
 
 function goNextTrial(url) {
