@@ -1,4 +1,6 @@
 $(function () {
+    changeTitle("恒常法 | method of constant (" + getTrialInfo() + ")");
+
     initLightness();
 
     /** Record answer **/

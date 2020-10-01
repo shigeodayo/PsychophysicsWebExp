@@ -1,3 +1,13 @@
+function changeTitle(newTitle) {
+    $('title').html(newTitle);
+}
+
+function getTrialInfo() {
+    var trialCount = $.cookie("trial_count");
+    var trialMax = $.cookie("trial_max");
+    return String(trialCount) + "/" + String(trialMax);
+}
+
 function recordAnswer(answer) {
     var trialCount = $.cookie("trial_count");
     $.cookie("ans-" + String(trialCount), answer);

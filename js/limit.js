@@ -1,4 +1,6 @@
 $(function () {
+    changeTitle("極限法 | method of limit (" + getTrialInfo() + ")");
+
     var ascending = initLightness();
 
     if (ascending) {

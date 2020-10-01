@@ -1,4 +1,6 @@
 $(function () {
+    changeTitle("調整法 | method of adjustment (" + getTrialInfo() + ")");
+
     initLightness();
 
     /** lightness control by arrow keys **/
