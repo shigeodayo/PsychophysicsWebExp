@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta http-equiv="content-type" charset="utf-8">
+        <link rel="stylesheet" href="css/core.css">
+        <title>test</title>
+    </head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+        <div class="header">
+            Match the brightness of the reference (left) by <span id="verb">adjusting</span> the brightness of the sample (right).
+        </div>
+
+        <div class="content">
+            <div>
+                <div id="box_ref" class="box"></div>
+                <div class="label">reference</div>
+            </div>
+
+            <div>
+                <div id="box_sample" class="box"></div>
+                <div class="label">sample</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <input id="light-down" class="updown_btn" type="button" value="down">
+            <input id="light-up" class="updown_btn" type="button" value="up">
+        </div>
+
+        <div class="content">
+            <input id="next" class="next_btn" type="button" value="next">
+        </div>
+
+        <div class="footer"></div>
+
+    </body>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/limit.js"></script>
+</html>
