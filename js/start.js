@@ -23,7 +23,7 @@ $(function () {
         window.location.href = "constant.html";
     });
     function initialize() {
-        alert("Start the experiment.");
+        alert("Click OK to start the experiment.");
 
         start = Date.now();
         id = "sy_" + generateStringRandomly();
