@@ -35,7 +35,7 @@ $(function () {
     }
     function initLimit() {
         var condition = shuffleArray([0, 0, 100, 100]);  // todo
-        alert(condition);
+        // alert(condition);
         for (var i = 0; i < REPETITION; i++) {
             $.cookie("condition-" + String((i + 1)), condition[i]);
         }
@@ -46,7 +46,7 @@ $(function () {
     function initAdjustment() {
         var condition = shuffleArray([randInt(0, 75), randInt(0, 75),
                                       randInt(75, 100), randInt(75, 100)]);  // todo
-        alert(condition);
+        // alert(condition);
         for (var i = 0; i < REPETITION; i++) {
             $.cookie("condition-" + String((i + 1)), condition[i]);
         }
@@ -62,7 +62,7 @@ $(function () {
         for (var i = 0; i < REPETITION; i++) {
             condition = condition.concat(shuffleArray(sample));
         }
-        alert(condition);
+        // alert(condition);
 
         for (var i = 0; i < REPETITION * 5; i++) {
             $.cookie("condition-" + String((i + 1)), condition[i]);
