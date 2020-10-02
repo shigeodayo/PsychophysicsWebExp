@@ -24,40 +24,33 @@ $(function () {
     }
 
     function getFilename() {
-        if ($.cookie("experiment") == "adjustment")    return "result-adj.csv";
-        else if ($.cookie("experiment") == "limit")    return "result-limit.csv";
-        else if ($.cookie("experiment") == "constant") return "result-const.csv";
+        var userId = $.cookie("name");
+        if ($.cookie("experiment") == "adjustment")    return "result-adj_" + userId + ".csv";
+        else if ($.cookie("experiment") == "limit")    return "result-limit_" + userId + ".csv";
+        else if ($.cookie("experiment") == "constant") return "result-const_" + userId + ".csv";
     }
 
     function getResult() {
-        if ($.cookie("experiment") == "adjustment")    return fetchResult("adjustment");
-        else if ($.cookie("experiment") == "limit")    return fetchLimitResult();
+        if ($.cookie("experiment") == "adjustment") return fetchResult("adjustment");
+        else if ($.cookie("experiment") == "limit") return fetchResult("limit");
         else if ($.cookie("experiment") == "constant") return fetchResult("constant");
     }
 
     function fetchResult(methodName) {
-        var data = methodName + ",0,75,75" + "\n";
-        for (var i = 1; i <= $.cookie("trial_max"); i++) {
-            data += $.cookie("condition-" + String(i)) + ",";
-        }
-        data = data.slice(0, -1);  // eliminate last char (',')
-        data += '\n';
+        var userId = $.cookie("name");
+        var elapsedTime = Date.now() - $.cookie("start");
+        var data = methodName + "," + userId + "," + elapsedTime + "\n";
 
-        for (var i = 1; i <= $.cookie("trial_max"); i++) {
-            data += $.cookie("ans-" + String(i)) + ",";
-        }
-        data = data.slice(0, -1);  // eliminate last char (',')
-
-        return data;
-    }
-
-    function fetchLimitResult() {
-        var data = "limit,0,75,75" + "\n";
-
-        for (var i = 1; i <= $.cookie("trial_max"); i++) {
-            var cond = $.cookie("condition-" + String(i));
-            if (cond == 0) data += "up,"
-            else data += "down,"
+        if (methodName == "limit") {
+            for (var i = 1; i <= $.cookie("trial_max"); i++) {
+                var cond = $.cookie("condition-" + String(i));
+                if (cond == 0) data += "up,"
+                else data += "down,"
+            }
+        } else {
+            for (var i = 1; i <= $.cookie("trial_max"); i++) {
+                data += $.cookie("condition-" + String(i)) + ",";
+            }
         }
         data = data.slice(0, -1);  // eliminate last char (',')
         data += '\n';
