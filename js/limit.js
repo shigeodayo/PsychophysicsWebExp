@@ -24,6 +24,9 @@ $(function () {
                 console.log("right");
                 if (ascending) lightUp();
                 break;
+            case 13: // enter key
+                goNext();
+                break;
             default: return; // exit this handler for other keys
         }
         e.preventDefault(); // prevent the default action (scroll / move caret)
@@ -37,9 +40,12 @@ $(function () {
 
     /** Record answer **/
     $("#next").click(function () {
+        goNext();
+    });
+    function goNext() {
         recordAnswer(getLightness());
         goNextTrial("limit.html");
-    });
+    }
 
     function initLightness() {
         var trial_count = String($.cookie("trial_count"));
