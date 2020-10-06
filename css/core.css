@@ -49,3 +49,9 @@ div#box_sample {
 .next_btn{
     margin: 20px;
 }
+input#bar {
+    width: 300px;
+}
+output{
+    width: 30px;
+}
