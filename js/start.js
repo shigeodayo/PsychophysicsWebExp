@@ -56,7 +56,8 @@ $(function () {
     }
 
     function initConstant() {
-        var sample = [10, 30, 50, 70, 90];  // todo
+        //   var sample = [10, 30, 50, 70, 90]; // todo
+        var sample = [10, 20, 30, 40, 50, 60, 70, 80, 90]; // todo
         var condition = [];
 
         for (var i = 0; i < REPETITION; i++) {
@@ -64,11 +65,11 @@ $(function () {
         }
         // alert(condition);
 
-        for (var i = 0; i < REPETITION * 5; i++) {
-            $.cookie("condition-" + String((i + 1)), condition[i]);
+        for (var i = 0; i < REPETITION * sample.length; i++) {
+            $.cookie("condition-" + String(i + 1), condition[i]);
         }
 
-        $.cookie("trial_max", REPETITION * 5);
+        $.cookie("trial_max", REPETITION * sample.length);
         $.cookie("experiment", "constant");
     }
 
