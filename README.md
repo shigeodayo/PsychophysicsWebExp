@@ -17,7 +17,7 @@ In total, you will repeat this task 4 times with different initial lightness.
 ### Method of Constant
 Select which do you feel lighter reference or sample.
 
-There are 5 different lightness of the sample.
+There are 9 different lightness of the sample.
 
 Each sample has 4 repetitions.
 

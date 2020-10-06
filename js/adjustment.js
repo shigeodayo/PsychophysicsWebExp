@@ -14,7 +14,7 @@ $(function () {
                 console.log("right");
                 lightUp();
                 break;
-            case 13: // enter
+            case 13: // enter key
                 goNext();
                 break;
             default: return; // exit this handler for other keys
