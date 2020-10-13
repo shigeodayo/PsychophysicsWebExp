@@ -50,8 +50,10 @@ div#box_sample {
     margin: 20px;
 }
 input#bar {
+    margin-top: 20px;
     width: 300px;
 }
-output{
-    width: 30px;
+output#bar_output {
+    /* margin-top: 20px; */
+    /* width: 120px; */
 }
