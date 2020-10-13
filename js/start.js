@@ -56,8 +56,11 @@ $(function () {
     }
 
     function initConstant() {
-        //   var sample = [10, 30, 50, 70, 90]; // todo
-        var sample = [10, 20, 30, 40, 50, 60, 70, 80, 90]; // todo
+        //   var sample = [10, 30, 50, 70, 90];  // (5 params)// todo
+        // var sample = [10, 20, 30, 40, 50, 60, 70, 80, 90];  // (9 params) // todo
+        // var sample = [30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85];  // (12 params) // todo
+        var sample = [10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90];  // (17 params) // todo
+
         var condition = [];
 
         for (var i = 0; i < REPETITION; i++) {
