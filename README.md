@@ -6,7 +6,9 @@ https://shigeodayo.github.io/PsychophysicsWebExp/
 
 The objective of the experiments is to estimate the PSE (and JND) of perceived lightness from two different colors.
 
-The hue and saturation of those two colors are the same, but only the lightness is different.
+The saturation of those two colors are the same, but the hue and lightness are different.
+
+Your task is to find the subjective equally lightness of both colors.
 
 ## Task
 ### Method of Limit/Adjustment
